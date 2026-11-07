@@ -36,7 +36,7 @@ jobs:
           security list-keychains -d user -s "$KEYCHAIN" login.keychain-db
 
       - name: Build
-        run: flutter build ios --release --no-codesign --dart-define=APP_ENV=production --dart-define=API_BASE_URL=https://kaftar.kuchizu.com
+        run: flutter build ios -v --release --no-codesign --dart-define=APP_ENV=production --dart-define=API_BASE_URL=https://kaftar.kuchizu.com
 
       - name: Sign
         run: |
